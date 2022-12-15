@@ -12,18 +12,15 @@ import { EditServerComponent } from './servers/edit-server/edit-server.component
 import { ServerComponent } from './servers/server/server.component';
 import { ServersService } from './servers/servers.service';
 
-import {Routes, RouterModule} from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 
-const appRoutes: Routes = [{
-  path: '',
-  component: HomeComponent
-}, {
-  path: 'users',
-  component: UsersComponent
-}, {
-  path: 'servers',
-  component: ServersComponent
-}];
+const appRoutes: Routes = [
+  {path: '', component: HomeComponent},
+  {path: 'users', component: UsersComponent},
+  {path: 'users/:userId/:username', component: UserComponent},
+  {path: 'servers', component: ServersComponent},
+  {path: 'servers/:serverId/edit', component: EditServerComponent},
+];
 
 @NgModule({
   declarations: [
