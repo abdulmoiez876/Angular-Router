@@ -25,7 +25,7 @@ export class EditServerComponent implements OnInit {
     // console.log(this.activatedRoute.snapshot.fragment);
     
     this.activatedRoute.queryParamMap.subscribe((params: ParamMap) => {
-      const editable = Boolean(params.get('allowEdit'));
+      const editable = params.get('allowEdit') === 'true' ? true : false;
       this.editable = editable;
     });
     this.activatedRoute.fragment.subscribe();
