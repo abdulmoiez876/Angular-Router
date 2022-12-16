@@ -5,7 +5,7 @@
       <a
         [routerLink]="['/servers', server.id]"
         [queryParams]="{
-          allowEdit: '1'
+          allowEdit: server.id === 3 ? true : false
         }"
         fragment="loading"
         class="list-group-item"
@@ -16,9 +16,6 @@
   </div>
   <div class="col-xs-12 col-sm-4">
     <router-outlet></router-outlet>
-    <!-- <app-edit-server></app-edit-server> -->
-    <!-- <hr> -->
-    <!-- <app-server></app-server> -->
   </div>
 </div>
 
